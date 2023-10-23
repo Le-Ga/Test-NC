@@ -1,0 +1,21 @@
+.video-container {
+    position: relative;
+    width: 700px;
+    margin: 0 auto;
+}
+
+.video-container video {
+    width: 100%;
+}
+
+.video-timer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 24px;
+}

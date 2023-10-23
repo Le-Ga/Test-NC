@@ -1,0 +1,165 @@
+html,
+body {
+    height: 100%;
+}
+
+.block {
+    padding: 50px;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.block__item {
+    margin: 0 0 100px 0;
+}
+
+/* !----------------------------------------------------------------------------! */
+.circle {
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.circle-animation {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.square {
+    width: 150px;
+    height: 150px;
+    background-color: green;
+}
+
+.square-animation {
+    animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rectangle {
+    width: 300px;
+    height: 150px;
+    background-color: green;
+}
+
+.rectangle-animation {
+    animation: moveRotate 3s infinite linear;
+}
+
+@keyframes moveRotate {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateX(200px) rotate(360deg);
+    }
+
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid green;
+}
+
+.triangle-animation {
+    animation: move 2s infinite alternate;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(200px);
+    }
+}
+
+
+
+.cube {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    margin: 20px 20px 100px 20px;
+}
+
+.face {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    opacity: 0.7;
+}
+
+.front  { background: red; transform: translateZ(50px); }
+.back   { background: green; transform: rotateY(180deg) translateZ(50px); }
+.top    { background: blue; transform: rotateX(90deg) translateZ(50px); }
+.bottom { background: yellow; transform: rotateX(-90deg) translateZ(50px); }
+.right  { background: orange; transform: rotateY(90deg) translateZ(50px); }
+.left   { background: purple; transform: rotateY(-90deg) translateZ(50px); }
+
+
+
+.card {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .inner {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.front {
+    background: red;
+}
+
+.back {
+    background: blue;
+    transform: rotateY(180deg);
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <form id="myForm">
+            <div class="form__item">
+                <label for="name">Имя:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <span id="nameError" class="red"></span>
+            </div>
+            <div class="form__item">
+                <label for="phone">Телефон:</label><br>
+                <input type="text" id="phone" name="phone" required><br>
+                <span id="phoneError" class="red"></span>
+            </div>
+            <div class="form__item">
+                <label for="password">Пароль:</label><br>
+                <input type="password" id="password" name="password" required><br>
+                <span id="passwordError" class="red"></span>
+            </div>
+            <div class="form__item">
+                <label for="confirmPassword">Повторите пароль:</label><br>
+                <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+                <span id="confirmPasswordError" class="red"></span>
+            </div>
+            <button type="button">Отправить</button>
+        </form>
+    </div>
+
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="script.js"></script>
+
+</html>
